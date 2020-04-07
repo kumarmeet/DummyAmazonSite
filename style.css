@@ -1,0 +1,231 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+html,
+body {
+  width: 100%;
+  background: linear-gradient(0deg, #cfcfdf 0%, #eaeb3d 97%);
+}
+header {
+  width: 100%;
+  margin: 0 auto;
+  background: #1e2231;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .brand {
+  font-size: 1.5rem;
+}
+header span {
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: gray;
+}
+header .nav-bar {
+  width: 28%;
+  display: flex;
+}
+header .nav-bar ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+header .nav-bar ul li {
+  list-style: none;
+}
+header a {
+  text-decoration: none;
+}
+header .nav-bar__middle {
+  width: 50%;
+  align-self: flex-end;
+}
+header .nav-bar__middle ul li {
+  font-size: 0.6rem;
+  font-weight: bold;
+  align-self: flex-end;
+}
+header .nav-bar__middle ul li a {
+  color: #acb1bd;
+}
+.drop-down,
+.toggle-button {
+  display: none;
+}
+.grid-container {
+  max-width: 90.8%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1.5rem;
+}
+.grid-container .check {
+  padding: 0.7rem;
+  background: #ffffff;
+}
+.grid-container .item-link {
+  display: block;
+  color: #3d3df3;
+  text-decoration: none;
+}
+.grid-container .container-heading {
+  font-size: 1rem;
+  background: #ffffff;
+  color: black;
+  padding: 0.5rem;
+}
+.grid-container div img {
+  width: 100%;
+}
+.grid-container .box {
+  grid-column-start: span 4;
+  justify-self: center;
+  padding: 5rem;
+  width: 84%;
+  text-align: center;
+  background: palevioletred;
+}
+.content {
+  width: 40%;
+  margin: 5rem auto 10rem auto;
+  grid-column-start: span 4;
+  justify-self: center;
+  color: black;
+  font-weight: bold;
+  line-height: 1.5;
+}
+.content h2,
+.content p {
+  color: black;
+}
+.recommendation {
+  grid-column-start: span 4;
+  justify-self: center;
+  width: 98.65vw;
+  text-align: center;
+  background: white;
+  padding: 3rem;
+}
+.recommendation button {
+  color: black;
+  padding: 0.4rem 5rem;
+  border-radius: 4px;
+  background-image: linear-gradient(
+    to right,
+    #ffb347 0%,
+    #fc3 51%,
+    #ffb347 100%
+  );
+  cursor: pointer;
+  border-style: none;
+  -webkit-appearance: none;
+}
+.recommendation .back-to-top {
+  background-color: #23252c;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.7rem;
+}
+.recommendation .back-to-top a {
+  text-decoration: none;
+}
+footer {
+  background-color: #000000;
+  color: white;
+  font-size: 0.6rem;
+  padding: 5rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+footer ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+footer .f-heading {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+footer ul li {
+  list-style: none;
+  margin-bottom: 0.7rem;
+}
+footer ul li a {
+  text-decoration: none;
+}
+.effect {
+  display: none;
+}
+@media (max-width: 1000px) {
+  header .nav-bar,
+  header .nav-bar__middle {
+    display: none;
+  }
+  .toggle-button {
+    display: inline-block;
+    width: 3rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .toggle-button:focus {
+    outline: none;
+  }
+  .toggle-button__bar {
+    width: 70%;
+    height: 0.3rem;
+    background: #5c5555;
+    display: block;
+    margin: 0.3rem 0;
+  }
+  .drop-down {
+    background: #1e2231;
+  }
+  .drop-down .mobile-nav__bar {
+    margin-bottom: 1rem;
+    padding: 0 0 1rem 1rem;
+  }
+  .drop-down .mobile-nav__bar li {
+    list-style: none;
+  }
+  .drop-down .mobile-nav__bar ul li a {
+    text-decoration: none;
+    color: #585b62;
+  }
+  .hide {
+    opacity: 0;
+    transform: translateX(-30rem);
+    height: 0;
+  }
+  .effect {
+    transition: cubic-bezier(0.6, 0.11, 0, 0.94) 0.4s;
+    display: block;
+  }
+  .content {
+    width: 100%;
+    margin: 3rem auto 7rem auto;
+  }
+  .grid-container {
+    display: block;
+  }
+  .grid-container .check {
+    margin-top: 1rem;
+  }
+  .box {
+    margin: 1rem auto;
+  }
+  .recommendation {
+    margin: 0 auto;
+    width: 100%;
+  }
+}
